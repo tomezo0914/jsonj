@@ -74,7 +74,7 @@ public class JSONObject {
 	private static String toJsonString(Object val) {
 		StringBuilder json = new StringBuilder();
 		if (val == null) {
-			json.append("null");
+			json.append(NULL);
 		} else if (val instanceof String) {
 			json.append(DQ).append(val).append(DQ);
 		} else if (val instanceof Number) {
@@ -86,7 +86,7 @@ public class JSONObject {
 		} else if (val instanceof List) {
 			json.append(toJSON((List) val));
 		} else {
-			json.append("null");//TODO
+			json.append(NULL);
 		}
 		return json.toString();
 	}
