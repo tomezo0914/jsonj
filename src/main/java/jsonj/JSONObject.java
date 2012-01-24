@@ -70,7 +70,7 @@ public class JSONObject {
 		return json.substring(0, json.length() - 1) + "}";
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private static String toJsonString(Object val) {
 		StringBuilder json = new StringBuilder();
 		if (val == null) {
